@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Cat</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+
+        body{
+            height: 100vh;
+        }
+        .navbar{   
+            height: 10vh;
+            /* padding: 9px 0px; */
+            background-color: lightpink;
+            text-align: center;
+            font-size: 20px;
+            color: blueviolet;
+        }
+
+        .middle_section{
+            height: 85vh;
+            background-color: lavenderblush;
+            /* justify-content: center;  */
+        }
+
+        .middle_section_input{
+            height: 15vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightgrey;
+        }
+
+        .middle_section_main{
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightgoldenrodyellow;
+        }
+
+        #enter_text{
+            padding: 5px 15px;
+            text-align: left;
+            
+        }
+
+        #main_box{
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            font-size: 40px;
+            color: red;
+            display: flex;
+            align-items: center;
+            border-radius: 5%;
+            background-color: lightcyan;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .footer{
+            height: 5vh;
+            font-size: 12px;
+            color: blueviolet;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Copy Cat Task</h1>
+    </div>
+    <div class="middle_section">
+       <div class="middle_section_input">
+        <input type="text" id="enter_text" placeholder="Enter the text here" onkeyup="input_function()">
+       </div>
+        <div class="middle_section_main">
+            <div id="main_box"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>Made with Love By Divyansh Rajpoot</h2>
+    </div>
+</body>
+<script>
+    let input_box_ref = document.getElementById('enter_text');
+    // console.log(typeof('input_box_ref'));
+    let main_box_ref = document.getElementById('main_box');
+    // console.log(typeof('main_box_ref'));
+
+    function input_function() {
+        main_box_ref.innerText = input_box_ref.value;
+    }
+
+
+
+</script>
+</html>
